@@ -113,9 +113,7 @@ export const HomeBody: React.FC = () => {
               }}
             >
               <span id="about-me">Skills ⚒️</span>
-              <Typography color={"white"}>
-                <i>Learning is a never-ending process</i>
-              </Typography>
+              <i>Learning is a never-ending process</i>
             </Link>
           </Typography>
         </div>
