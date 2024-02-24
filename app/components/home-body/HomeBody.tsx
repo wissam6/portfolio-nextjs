@@ -113,7 +113,6 @@ export const HomeBody: React.FC = () => {
               }}
             >
               <span id="about-me">Skills ⚒️</span>
-              <i>Learning is a never-ending process</i>
             </Link>
           </Typography>
         </div>
