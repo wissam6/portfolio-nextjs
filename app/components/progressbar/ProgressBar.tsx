@@ -2,7 +2,7 @@
 import * as React from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-export const Progressbar = () => {
+export const Progressbar: React.FC = () => {
   const [now, setNow] = React.useState([
     {
       text: "HTML5",

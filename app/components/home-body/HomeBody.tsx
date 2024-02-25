@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 import Image from "next/image";
 import { Button, Typography } from "@mui/material";
@@ -9,20 +8,6 @@ import { Socials } from "../socials/Socials";
 
 export const HomeBody: React.FC = () => {
   const color = "white";
-  const number = 1;
-  const alternateColors = [
-    ["#88B04B", "#F7CAC9", "#45B8AC"],
-    ["#34568B", "#FF6F61", "#6B5B95"],
-  ];
-  const [colors, setColors] = React.useState(0);
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setColors((prevIndex) => (prevIndex == number ? 0 : prevIndex + 1));
-    }, 500);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
   return (
     <>
       <div
@@ -57,6 +42,7 @@ export const HomeBody: React.FC = () => {
               textDecoration: "none",
             }}
             href={"https://www.telerik.com/"}
+            target="_blank"
           >
             Kendo UI
           </Link>{" "}
@@ -82,16 +68,7 @@ export const HomeBody: React.FC = () => {
         </Typography>
         <br />
         <Typography color={color}>
-          For a full bio about me, click this{" "}
-          <Button
-            style={{
-              //color: alternateColors[colors][1],
-              //background: alternateColors[colors][2],
-              fontSize: "16px",
-            }}
-          >
-            Cool Sexy Button
-          </Button>
+          For a full bio about me, click this button.
         </Typography>
       </div>
       <div>
@@ -167,8 +144,8 @@ export const HomeBody: React.FC = () => {
             days, I am sometimes dropping some tweets, but I will eventually get
             back to content creation when the time is right.
           </Typography>
-          <Socials />
         </div>
+        <Socials />
       </div>
     </>
   );
